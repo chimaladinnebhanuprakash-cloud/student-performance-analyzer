@@ -1,0 +1,30 @@
+<!-- AI Assistant Chat Page Content -->
+<div class="page-header">
+    <h1>AI Study Assistant</h1>
+    <p>Get personalized study tips and guidance</p>
+</div>
+
+<div class="card">
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message assistant">
+                <div class="message-avatar assistant">AI</div>
+                <div class="message-content">
+                    Hello! I'm your AI study assistant. I can help you with study tips, time management, motivation, and
+                    performance improvement. How can I assist you today?
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <form id="chatForm" class="chat-input-form">
+                <input type="text" id="chatInput" class="form-input chat-input" placeholder="Type your message..."
+                    required>
+                <button type="submit" class="btn-send" id="sendBtn">
+                    <span id="sendBtnText">Send</span>
+                    <span id="sendBtnLoading" class="loading hidden"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

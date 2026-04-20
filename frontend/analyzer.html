@@ -1,0 +1,101 @@
+<!-- Performance Analyzer Page Content -->
+<div class="page-header">
+    <h1>Performance Analyzer</h1>
+    <p>Analyze your academic performance and get personalized insights</p>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h2>Enter Your Performance Data</h2>
+        <p>Fill in your subject marks and other details</p>
+    </div>
+
+    <form id="analyzerForm">
+        <!-- Subject Marks -->
+        <div class="form-group">
+            <label>Subject-wise Marks (0-100)</label>
+            <div id="subjectsContainer" class="subjects-container">
+                <div class="subject-row">
+                    <div>
+                        <input type="text" class="form-input subject-name" placeholder="Subject name" required>
+                    </div>
+                    <div>
+                        <input type="number" class="form-input subject-marks" placeholder="Marks (0-100)" min="0"
+                            max="100" required>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-remove" onclick="removeSubject(this)">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn-add" onclick="addSubject()">+ Add Subject</button>
+        </div>
+
+        <!-- Attendance -->
+        <div class="form-group">
+            <label for="attendance">Attendance Percentage</label>
+            <input type="number" id="attendance" class="form-input" placeholder="Enter attendance % (0-100)" min="0"
+                max="100" step="0.1" required>
+        </div>
+
+        <!-- Study Hours -->
+        <div class="form-group">
+            <label for="studyHours">Average Study Hours per Day</label>
+            <input type="number" id="studyHours" class="form-input" placeholder="Enter study hours (e.g., 5)" min="0"
+                max="24" step="0.5" required>
+        </div>
+
+        <!-- Backlogs -->
+        <div class="form-group">
+            <label for="backlogs">Number of Backlogs</label>
+            <input type="number" id="backlogs" class="form-input" placeholder="Enter number of backlogs" min="0"
+                value="0" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="analyzeBtn">
+            <span id="analyzeBtnText">Analyze Performance</span>
+            <span id="analyzeBtnLoading" class="loading hidden"></span>
+        </button>
+    </form>
+</div>
+
+<!-- Analysis Results -->
+<div id="analysisResults" class="analysis-results">
+    <div class="grid grid-2 mb-4">
+        <div class="card score-card">
+            <div class="score-display">
+                <div class="score-value" id="scoreValue">85</div>
+                <div class="score-category" id="scoreCategory">Excellent</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Subject Strength Analysis</h2>
+                <p>Visualization of your performance across subjects</p>
+            </div>
+            <div class="chart-container">
+                <canvas id="subjectRadarChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>Analysis Explanation</h2>
+        </div>
+        <div class="explanation-box">
+            <p id="explanationText"></p>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            <h2>Improvement Suggestions</h2>
+            <p>Personalized recommendations for you</p>
+        </div>
+        <ul id="suggestionsList" class="suggestions-list">
+            <!-- Suggestions will be added here -->
+        </ul>
+    </div>
+</div>

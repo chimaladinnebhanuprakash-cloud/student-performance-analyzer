@@ -1,0 +1,66 @@
+<!-- Home Page Content -->
+<div class="page-header">
+    <h1>Welcome, <span id="userName">Student</span>! 👋</h1>
+    <p>Here's your performance overview</p>
+</div>
+
+<!-- Top Summary Row -->
+<div class="grid grid-4 mb-4">
+    <div class="summary-card">
+        <div class="summary-card-icon">🎯</div>
+        <div class="summary-card-value" id="performanceLevel">-</div>
+        <div class="summary-card-label">Overall Level</div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-card-icon">📊</div>
+        <div class="summary-card-value" id="averageMarks">-</div>
+        <div class="summary-card-label">Average Marks</div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-card-icon">📅</div>
+        <div class="summary-card-value" id="attendancePercent">-</div>
+        <div class="summary-card-label">Attendance %</div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-card-icon">📚</div>
+        <div class="summary-card-value" id="activeSubjects">-</div>
+        <div class="summary-card-label">Subjects</div>
+    </div>
+</div>
+
+<div class="grid grid-2 mb-4">
+    <!-- Performance Trend Chart -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Performance Trend</h2>
+            <p>Your performance over time</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="performanceChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Attendance Analysis Chart -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Attendance Analysis</h2>
+            <p>Visual status of your attendance</p>
+        </div>
+        <div class="chart-container compact">
+            <canvas id="attendanceChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Action Buttons -->
+<div class="action-buttons">
+    <button class="btn btn-primary" onclick="navigateToPage('analyzer')">
+        📈 Analyze Performance
+    </button>
+    <button class="btn btn-success" onclick="navigateToPage('chat')">
+        💬 Ask AI Assistant
+    </button>
+</div>
