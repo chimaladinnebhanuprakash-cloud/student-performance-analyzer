@@ -323,14 +323,7 @@ if __name__ == '__main__':
     print("=" * 50)
     print("Student Performance Analyzer")
     print("=" * 50)
-    print("Server starting on http://localhost:5000")
+    port = int(os.environ.get("PORT", 5000))
+    print(f"Server starting on http://localhost:{port}")
     print("=" * 50)
-    app.run(debug=True, host='0.0.0.0', port=5000)
-
-import os
-
-app.secret_key = "your_secret_key"
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True, host='0.0.0.0', port=port)
