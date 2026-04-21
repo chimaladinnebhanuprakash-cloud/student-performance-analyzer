@@ -1,7 +1,7 @@
 # Student Performance Analyzer
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-student--performance--analyzer-blue?style=for-the-badge)](https://student-performance-analyzer-chima.onrender.com)
-*(Note: Replace the link above with your actual Render URL when it's live)*
+[![Live Demo](https://img.shields.io/badge/Live_Demo-student--performance--analyzer-blue?style=for-the-badge)](https://student-performance-analyzer-2.onrender.com)
+
 
 A complete full-stack web application for analyzing student performance with authentication, profile management, performance analysis, and an AI assistant chatbot.
 
