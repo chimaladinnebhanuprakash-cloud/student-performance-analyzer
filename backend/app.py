@@ -17,7 +17,15 @@ import chatbot
 
 app = Flask(__name__, static_folder='../frontend', static_url_path='')
 app.config.from_object(Config)
-CORS(app, supports_credentials=True)
+CORS(app, supports_credentials=True, origins=['http://localhost:5000', 'http://127.0.0.1:5000'])
+
+@app.after_request
+def add_header(response):
+    """Ensure session cookies are properly sent"""
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
 
 # Initialize database on first run
 def init_db():
@@ -318,3 +326,11 @@ if __name__ == '__main__':
     print("Server starting on http://localhost:5000")
     print("=" * 50)
     app.run(debug=True, host='0.0.0.0', port=5000)
+
+import os
+
+app.secret_key = "your_secret_key"
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)

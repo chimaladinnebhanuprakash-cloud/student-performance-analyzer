@@ -15,6 +15,8 @@ class Config:
     # Session settings
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Lax'
+    SESSION_COOKIE_PATH = '/'
+    SESSION_COOKIE_SECURE = False  # Set to True in production with HTTPS
     PERMANENT_SESSION_LIFETIME = 3600  # 1 hour
     
     # CORS settings
