@@ -1,5 +1,8 @@
 # Student Performance Analyzer
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-student--performance--analyzer-blue?style=for-the-badge)](https://student-performance-analyzer-chima.onrender.com)
+*(Note: Replace the link above with your actual Render URL when it's live)*
+
 A complete full-stack web application for analyzing student performance with authentication, profile management, performance analysis, and an AI assistant chatbot.
 
 ## Features
@@ -100,6 +103,16 @@ http://localhost:5000
 ```
 
 The login page will appear.
+
+## Deployment to Render
+
+This project is configured for easy deployment on [Render](https://render.com).
+1. Fork or push this repository to your GitHub account.
+2. Sign in to Render and create a new **Web Service**.
+3. Connect your repository. Render will automatically detect the `render.yaml` configuration.
+4. Add the following Environment Variable:
+   - `SECRET_KEY` (Click "Generate" to create a secure random key)
+5. Click **Deploy**.
 
 ## Usage Guide
 
