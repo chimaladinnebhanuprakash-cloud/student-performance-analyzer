@@ -1,5 +1,4 @@
 // Authentication JavaScript - Login and Signup
-const API_BASE = 'http://localhost:5000/api';
 
 // Show error messages
 function showError(container, errors) {
